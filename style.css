@@ -1,0 +1,89 @@
+@import url(./css/fonts.css);
+@import url(./css/reset.css);
+body,
+html {
+  height: 100%;
+}
+
+.header {
+  font-size: 14px;
+  font-weight: lighter;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.72);
+  transition: 0.35s cubic-bezier(1, 1, 1, 1);
+}
+.header.active {
+  transform: translateY(-100%);
+}
+.header h1 .logo {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.header h1 .logo .outText {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+}
+.header h1 .logo svg {
+  margin: 2px 5px 0 0;
+}
+.header nav .gnb {
+  display: flex;
+  gap: 20px;
+}
+
+section {
+  height: 100vh;
+}
+
+.main-visual {
+  padding-top: 100px;
+  height: 100%;
+  overflow: hidden;
+}
+.main-visual .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.main-visual .title h2 {
+  font-size: 8vw;
+  font-weight: bolder;
+}
+.main-visual .visual-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.main-visual .visual-img .img-wrap {
+  display: flex;
+  width: 120vw;
+  margin: 0 0 2vw -10vw;
+}
+.main-visual .visual-img .img-wrap span {
+  flex: 1;
+  margin: 0 -2.5vw;
+  transition: transform 0.5s;
+}
+.main-visual .visual-img .img-wrap span:hover {
+  transform: translateY(-50px);
+}
+.main-visual .visual-img .img-wrap span img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
