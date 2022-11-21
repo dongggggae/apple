@@ -10,9 +10,11 @@
 @font-face {
   font-family: "AppleSD";
   src: url("../fonts/AppleSDGothicNeoH.woff") format("woff");
-  font-weight: 700;
 }
-
+@font-face {
+  font-family: "AppleSD";
+  src: url("../fonts/AppleSDGothicNeoB.woff") format("woff");
+}
 body {
   font-family: "SF-Pro", "AppleSD", sans-serif;
   line-height: 1.25;

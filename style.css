@@ -5,6 +5,15 @@ html {
   height: 100%;
 }
 
+.outText {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+}
+
 .header {
   font-size: 14px;
   font-weight: lighter;
@@ -30,14 +39,6 @@ html {
   align-items: center;
   font-size: 14px;
 }
-.header h1 .logo .outText {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-}
 .header h1 .logo svg {
   margin: 2px 5px 0 0;
 }
@@ -48,11 +49,11 @@ html {
 
 section {
   height: 100vh;
+  position: relative;
 }
 
 .main-visual {
   padding-top: 100px;
-  height: 100%;
   overflow: hidden;
 }
 .main-visual .title {
@@ -86,4 +87,62 @@ section {
 .main-visual .visual-img .img-wrap span img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.watch-intro .text-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #a5fecb, #20bdff, #5433ff);
+  height: 100%;
+}
+.watch-intro .text-area .text-main p {
+  font-size: 5vw;
+  line-height: 1.4;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  opacity: 0.5;
+}
+.watch-intro .text-area .text-main p span {
+  display: block;
+  position: relative;
+}
+.watch-intro .text-area .text-main p.replay, .watch-intro .text-area .text-main p.play {
+  overflow: hidden;
+}
+.watch-intro .text-area .text-main p.replay span {
+  transform: translateY(-100%);
+}
+.watch-intro .text-area .text-main p.play span {
+  transform: translateY(100%);
+}
+.watch-intro .text-area .text-sub {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  visibility: hidden;
+}
+.watch-intro .text-area .text-sub em {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  font-size: 150px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  color: #fff;
+  overflow: hidden;
+}
+.watch-intro .text-area .text-sub em span.logo svg {
+  width: 250px;
+  height: 420px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+.watch-intro .text-area .text-sub em span {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%);
 }
