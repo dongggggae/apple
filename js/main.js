@@ -43,4 +43,3 @@ $(function () {
     })
     .to(".watch-intro .text-sub span", { opacity: 0.1 });
 });
-// git push -u origin main
