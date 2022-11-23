@@ -13,7 +13,8 @@ html {
   clip: rect(0 0 0 0);
   margin: -1px;
 }
-
+/* 가독성 textindent */
+/* header */
 .header {
   font-size: 14px;
   font-weight: lighter;
@@ -27,7 +28,7 @@ html {
   align-items: center;
   padding: 0 30px;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-          backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(255, 255, 255, 0.72);
   transition: 0.35s cubic-bezier(1, 1, 1, 1);
 }
@@ -39,19 +40,25 @@ html {
   align-items: center;
   font-size: 14px;
 }
-.header h1 .logo svg {
-  margin: 2px 5px 0 0;
+
+.header h1 .logo img {
+  height: 44px;
+  width: 14px;
+  margin: 0 5px 0 0;
+  object-fit: contain;
+  filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(29deg) brightness(0%) contrast(106%);
 }
+
 .header nav .gnb {
   display: flex;
   gap: 20px;
 }
-
+/* header */
 section {
   min-height: 100vh;
   position: relative;
 }
-
+/* main sect1 */
 .main-visual {
   padding-top: 100px;
   overflow: hidden;
@@ -86,9 +93,10 @@ section {
 }
 .main-visual .visual-img .img-wrap span img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
+/* main end--- */
+/* watch start */
 .watch-intro .text-area {
   display: flex;
   flex-direction: row;
@@ -109,7 +117,8 @@ section {
   display: block;
   position: relative;
 }
-.watch-intro .text-area .text-main p.replay, .watch-intro .text-area .text-main p.play {
+.watch-intro .text-area .text-main p.replay,
+.watch-intro .text-area .text-main p.play {
   overflow: hidden;
 }
 .watch-intro .text-area .text-main p.replay span {
@@ -132,15 +141,18 @@ section {
   line-height: 1;
   font-size: 150px;
   font-weight: bold;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
   color: #fff;
   overflow: hidden;
 }
-.watch-intro .text-area .text-sub em span.logo svg {
-  width: 250px;
-  height: 420px;
-  vertical-align: top;
+.watch-intro .text-area .text-sub em span.logo img {
   margin-top: 10px;
+  width: 200px;
+  color: #fff;
+  height: 420px;
+  padding-right: 15px;
+  vertical-align: top;
+  object-fit: contain;
 }
 .watch-intro .text-area .text-sub em span {
   display: block;
@@ -161,7 +173,7 @@ section {
   opacity: 0;
   top: 0;
   left: 0;
-  transform: translateY(100vh);
+  transform: translateY(100%);
   transition: transform 1s, opacity 1s, ease-in;
 }
 .watch-intro .watch-area .watch-wrap {
@@ -224,7 +236,7 @@ section {
   transform: translateY(100%);
   opacity: 0;
 }
-
+/* watch 공통속성 */
 .watch-quick .watch {
   padding-top: 150px;
 }
@@ -271,6 +283,8 @@ section {
   text-align: center;
   padding-top: 150px;
 }
+/* watch 공통속성 */
+/* ultra */
 .watch-quick .ultra-inner .option.opt2 .opt-list:first-of-type:before {
   background-image: url(./imges/ico-sos.png);
 }
@@ -332,6 +346,8 @@ section {
 .watch-quick .ultra-inner .gray {
   padding: 0 0 1rem 0;
 }
+/* ultra */
+/* series */
 .watch-quick .watch-series {
   background-color: #000;
   margin-top: 50px;
@@ -399,6 +415,8 @@ section {
 .watch-quick .watch-series .opt3 .opt-list:nth-of-type(3) {
   background-image: url(./imges/img-ser-siri.jpg);
 }
+/* series */
+/* se start */
 .watch-quick .watch-se {
   background-color: #fff;
 }
@@ -498,7 +516,8 @@ section {
 .watch-quick .watch-se .opt2 .opt-list:last-of-type {
   background-image: url(./imges/ico-se-medicine.png);
 }
-
+/* se end */
+/* stroy */
 .watch-story {
   position: relative;
   width: 100vw;
@@ -516,7 +535,7 @@ section {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   opacity: 0;
 }
 .watch-story .bgWrap img:first-of-type {

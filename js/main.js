@@ -46,7 +46,7 @@ $(function () {
     .to(
       ".watch-intro .watch-area .watch-wrap",
       { yPercent: -100, scale: 1, opacity: 1, duration: 2 },
-      "b+=1"
+      "b+=1.5"
     )
     .to(
       ".watch-intro .watch-area .seneitem",
